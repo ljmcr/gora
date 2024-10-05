@@ -592,7 +592,7 @@
             <hadoop.log.dir>${project.basedir}/target/test-logs/</hadoop.log.dir>
             <test.build.data>${project.basedir}/target/test-data/</test.build.data>
           </systemPropertyVariables>
-          <argLine>-Xmx512m</argLine>
+          <argLine>-Xmx512m --add-opens java.base/java.net=ALL-UNNAMED</argLine>
           <forkMode>always</forkMode>
           <testFailureIgnore>false</testFailureIgnore>
           <forkedProcessTimeoutInSeconds>2400</forkedProcessTimeoutInSeconds>
