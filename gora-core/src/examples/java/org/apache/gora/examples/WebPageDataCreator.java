@@ -113,7 +113,8 @@ public class WebPageDataCreator {
       throws IOException {
     try{
       WebPage page;
-      log.info("creating web page data");
+      log.error("creating web page data");
+      log.error("dataStore: " + (dataStore != null));
       
       for(int i=0; i<URLS.length; i++) {
         page = WebPage.newBuilder().build();
@@ -137,10 +138,10 @@ public class WebPageDataCreator {
         dataStore.put(URLS[i], page);
       }
       dataStore.flush();
-      log.info("finished creating web page data");
+      log.error("finished creating web page data");
     }
     catch(Exception e){
-      log.info("error creating web page data");
+      log.error("error creating web page data");
     } 
   }
   

@@ -19,8 +19,7 @@
 package org.apache.gora.store;
 
 import java.io.IOException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.apache.gora.GoraTestDriver;
 import org.apache.gora.examples.generated.Employee;
 import org.apache.gora.examples.generated.WebPage;
@@ -29,6 +28,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A base class for {@link DataStore} tests. This is just a convenience
@@ -397,7 +398,8 @@ public abstract class DataStoreTestBase {
 
   @Test
   public void testResultSizeWithLimit() throws Exception {
-    log.info("test method: testResultSizeWithLimit");
+    log.error("test method: testResultSizeWithLimit");
+    log.error("webPageStore: " + (webPageStore != null));
     DataStoreTestUtil.testResultSizeWebPagesWithLimit(webPageStore);
   }
 
